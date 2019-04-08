@@ -8,7 +8,7 @@ The script operates with three types of entities: "drops" - a random count of th
 
 Functions to operate drops:
 =====
-* `DoorFramework.createDrop(` creates an item drop record to be added to an item roll/
+* `DoorFramework.createDrop(` creates an item drop record to be added to an item roll/  
   `item,` a table with `refId`, `charge`, `enchantmentCharge` and `soul` of the item. All but `refId` are optional.  
   `min,` minimal possible count of `item`  
   `max,` amximal possible count of `item`  
