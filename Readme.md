@@ -4,13 +4,15 @@ Requires [DataManager](https://github.com/tes3mp-scripts/DataManager)!
 
 The script operates with three types of entities: "drops" - a random count of the specified item to be spawned, "roll" - a collection of drops to choose one (or none) from at random, "stock" - a collection of rolls to generate an inventory at random.
 
+`example.lua` shows how to use it (also makes use of [ContainerFramework](https://github.com/tes3mp-scripts/ContainerFramework))
+
 Functions to operate drops:
 =====
 * `DoorFramework.createDrop(` creates an item drop record to be added to an item roll/
-  `item,` a table with `refId`, `charge`, `enchantmentCharge` and `soul` of the item. All but `refId` are optional.
-  `min,` minimal possible count of `item`
-  `max,` amximal possible count of `item`
-  `distribution` distribution to be used when taking count at random. 'uniform' by default.
+  `item,` a table with `refId`, `charge`, `enchantmentCharge` and `soul` of the item. All but `refId` are optional.  
+  `min,` minimal possible count of `item`  
+  `max,` amximal possible count of `item`  
+  `distribution` distribution to be used when taking count at random. 'uniform' by default.  
   `)`
   returns `dropId`
 * `DropFramework.getDrop(dropId)`
@@ -28,10 +30,10 @@ Functions to operate drops:
 Functions to operate drops:
 =====
 * `DropFramework.addDrop(name, dropId)` creates a single-drop roll to stock with `name`
-* `DropFramework.addRoll(` adds a roll with specified drops and their chances of being selected (if the sum of chances is `>=1` it's guaranteed not to select nothing)
-  `name,` of the stock to add this roll to
-  `drops,` list of `dropId`s
-  `chances` list of values between `0` and `1`
+* `DropFramework.addRoll(` adds a roll with specified drops and their chances of being selected (if the sum of chances is `>=1` it's guaranteed not to select nothing)  
+  `name,` of the stock to add this roll to  
+  `drops,` list of `dropId`s  
+  `chances` list of values between `0` and `1`  
   `)`
 
 Functions to operate stocks:
